@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+</head>
+
+<body>
+    <div id="app">
+       <ul>
+           <li v-for="canal in canalesYoutube">
+                {{ canal.nombre }} con nombre real {{ canal.nameYou }} y lo encuentras en <a v-bind:href="canal.url">su canal de youtube</a>
+           </li>
+       </ul>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+new Vue({
+    el: "#app",
+    data:{
+       canalesYoutube:
+       [
+         { nombre:"Rubius", nameYou:"Ruben" , url:"https://www.youtube.com/"},
+         { nombre:"AuronPlay", nameYou:"Raul" , url:"https://www.facebook.com/"},
+         { nombre:"JuegaGerman", nameYou:"German" , url:"https://www.mercadolibre.com/"},
+         { nombre:"FernanFloo", nameYou:"Fernando" , url:"https://www.w3school.com/"},
+         { nombre:"LuisitoComunica", nameYou:"Luis" , url:"https://www.instagram.com/"},
+       ]
+    },
+    methods:{
+       
+    }
+    
+})
+</script>
